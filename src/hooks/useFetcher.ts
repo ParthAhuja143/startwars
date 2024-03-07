@@ -6,13 +6,12 @@ const useFetcher = (route: string) => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
   
-    const headerOptions = { tenantId: (window as any).tenantId || null }
-  
     useEffect(() => {
       let didCancel = false;
       (async function() {
         try {
           const response = await fetch(route)
+          console.log(response, 'response')
           const data = await response.json()
           if (!didCancel) {
             setLoading(false)
@@ -20,7 +19,6 @@ const useFetcher = (route: string) => {
           }
         } catch (e : any) {
           if (!didCancel) {
-            console.log("there was a problem with useFetch", e)
             setError(e)
             setLoading(false)
           }

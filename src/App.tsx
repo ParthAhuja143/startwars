@@ -6,7 +6,7 @@ import { CSSPlugin, Power3 } from "gsap/all"
 import gsap from "gsap/gsap-core"
 import starwars from './assets/starwars.jpeg';
 import starwars_header from './assets/starwars-header.jpeg';
-import { IconButton } from '@mui/material';
+import { IconButton, Typography } from '@mui/material';
 import { ArrowBackIosNewSharp, ArrowForwardIosSharp } from '@mui/icons-material';
 import {useFetcher} from './hooks/useFetcher'
 import ModalComp from './components/Modal/Modal';
@@ -21,6 +21,7 @@ function App() {
   let cursorImg: RefObject<HTMLImageElement> = useRef(null);
   const [url, setUrl] = useState('https://swapi.dev/api/planets/?format=json')
   const {data, error, loading} = useFetcher(url);
+  console.log(error, data, loading);
   const [currentPlanet, setCurrentPlanet] = useState(null);
   gsap.registerPlugin(CSSPlugin, CSSRulePlugin)
 
@@ -95,13 +96,18 @@ const handleMouseLeave = () => {
 				})
 			}
 			</div>
+			{error && <Typography variant='body1' sx={{p: 2}}>There was an error fetching data :(</Typography>}
 		<div>
+		{data && 
+		<>
 		<IconButton disabled={data?.previous === null}>
 			<ArrowBackIosNewSharp sx={{color: 'black'}} />
 		</IconButton>
 		<IconButton disabled={data?.next === null} onClick={() => setUrl(data.next)}>
 			<ArrowForwardIosSharp sx={{color: 'black'}} />
 		</IconButton>
+		</>
+		}
 		</div>
     </div>
 	<div className = 'cursor2' ref={cursor2} style = {{top : ctop + "px" , left : cleft + "px"}}></div>
