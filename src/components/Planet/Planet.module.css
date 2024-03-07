@@ -1,0 +1,291 @@
+.assessment {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    flex: 1 0 0;
+    border-radius: 12px;
+    border: 1px solid var(--System-stroke2, #dadce0);
+    background: var(--Text-White, #fff);
+    max-width: 400px;
+    width: 100%;
+    margin: 10px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .assessment__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .assessment__icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: black;
+  }
+  
+  .assessment h4 {
+    color: var(--text-100, black);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 140%;
+    margin: 0;
+  }
+  
+  h6 {
+    color: var(--text-100, black);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    padding: 0 10px 0 0;
+    margin: 0;
+    border-right: 1px solid var(--Primary-50, black);
+  }
+  
+  .assessment__desc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: 1px dashed var(--System-stroke2, #dadce0);
+  }
+  
+  .assessment__date {
+    color: var(--Primary-50, black);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 10px;
+  }
+  
+  .assessment__footer{
+      justify-content: space-between;
+      width: 100%;
+  }
+  
+  .assessment__footer,
+  .assessment__footer > div {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .assessment__footer__div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1px;
+    margin: 5px 10px;
+  }
+  .assessment__footer__div sub {
+    color: var(--text-100, black);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+  }
+  
+  sub,
+  p {
+    margin: 0;
+  }
+  
+  .assessment__footer_p {
+    margin: 0;
+    color: var(--text-100, black);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 19.6px */
+  }
+  
+  .assessment_button {
+    display: flex;
+    height: 30px;
+    padding: 2px 8px 2px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    border-radius: 50px;
+    border: 1px solid var(--text-100, black);
+    background: var(--Text-White, #fff);
+    transition: all 0.3s ease;
+  }
+
+  .assessment_button:hover{
+    color: white !important;
+    background: black !important;
+  }
+  
+  .assessment__footer__right{
+      gap: 4px;
+  }
+  
+  .assessment_close{
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  .assessment_overview{
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* padding: 10px 200px 10px 200px; */
+  /* margin-right: 200px; */
+  margin: 10px;
+  max-height: 350px;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px #DADCE0 solid;
+  
+  margin-bottom: 20px;
+  height: 100%;
+  -webkit-transition:  max-height 0.25s ease-out;
+    -moz-transition:  max-height 0.25s ease-out;
+    -o-transition:  max-height 0.25s ease-out;
+    transition: max-height 0.25s ease-out;
+    -webkit-transition:  opacity 0.25s ease-out;
+    -moz-transition:  opacity 0.25s ease-out;
+    -o-transition:  opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out;
+  }
+  
+  .assessment_overview_box{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  flex: 1;
+  padding: 15px;
+  border-right: 1px #DADCE0 solid;
+  height: 100%;
+  }
+  
+  .assessment_overview_box_no_border{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  }
+  
+  .assessment_overview_sub_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 20px;
+    margin-bottom: -10px;
+  }
+  
+  .assessment_overview_sub_box_border{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 20px;
+    margin-bottom: -10px;
+  border-right: 1px #DADCE0 solid;
+  }
+  
+  .assessment_overview_title{
+    color: var(--text-100, black);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+  }
+  
+  .assessment_overview_number{
+    color: var(--text-100, black);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+  }
+  
+  .assessment_overview_stat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .assessment_sub{
+    color: black;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+  }
+  
+  .assessment_stat_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px;
+  }
+  
+  @media only screen and (max-width: 700px){
+    .assessment_overview_sub_box{
+        padding: 0 10px;
+    }
+  
+    .assessment_overview_title{
+        font-size: 12px;
+    }
+  
+    .assessment_overview_number{
+        font-size: 18px;
+    }
+  
+    .assessment_overview_sub_box_border{
+        padding: 0 10px;
+    }
+  
+    .assessment_overview{
+        margin: 10px 0;
+    }
+  
+    .assessment_overview_box{
+        border-bottom: 1px solid rgb(220, 220, 220);
+    }
+  }
+  
